@@ -70,9 +70,9 @@
   gap: 7px;
   font-weight: bold;
 }
-#weatherDetails{
-  display: none;
-}
+/* Show / Hide Weather Details */
+.disable{display: none;}
+.enable{display: block;}
 #extraWeatherDetails{
     background-color: aliceblue;
     font-weight: bold;
