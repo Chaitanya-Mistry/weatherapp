@@ -1,38 +1,73 @@
-.App {
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; /* To consider padding & border in width & height calculation */
+}
+#root{
+  background-color: rgb(144, 207, 232);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#weatherMainContainer{
+  background-color: aliceblue;
+  height: auto;
+  width: 35%;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 13px;
+  transition-property: height;
+  transition-duration: .4s;
+  transition-timing-function: linear;
 }
-
-.App-link {
-  color: #61dafb;
+#userInputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#userInputContainer #heading_of_app{
+  text-transform: capitalize;
+  padding: 16.7px 11px;
+  text-align: left;
+  border-bottom: 1px solid rgb(153, 153, 153);
+  color: dodgerblue;
+  letter-spacing: .5px;
+  word-spacing: .5px;
+  font-size: 25px;
+}
+#userInputBox:focus{
+  outline: none;
+  border: 1px solid rgb(93, 174, 254)!important;
+  box-shadow: 0px 2px 8px rgb(138, 196, 253);
+}
+#myLocationBtn{
+  width: 70%;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  background-color: rgb(162, 209, 255);
+  border:none;
+  padding: 13px;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+}
+#myLocationBtn:hover{
+  background-color: rgb(122, 189, 255);
+}
+#weatherDetails{
+  border:2px solid rebeccapurple;
+  height: auto;
+}
+#seperator{font-weight: bold;}
+#userInputBox{
+  padding: 13px;
+  width: 70%;
+  margin: 0px auto;
+  font-size: 19px;
 }
