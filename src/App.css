@@ -71,8 +71,9 @@
   font-weight: bold;
 }
 /* Show / Hide Weather Details */
-.disable{display: none;}
-.enable{display: block;}
+#mainWeatherDetails .disable{display: none;}
+#mainWeatherDetails .enable{display: block;}
+
 #extraWeatherDetails{
     background-color: aliceblue;
     font-weight: bold;
