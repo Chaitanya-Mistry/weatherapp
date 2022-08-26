@@ -60,10 +60,29 @@
 #myLocationBtn:hover{
   background-color: rgb(122, 189, 255);
 }
-#weatherDetails{
-  border:2px solid rebeccapurple;
-  height: auto;
+#mainWeatherDetails{
+  background-color:  rgb(126, 68, 183);
+  color: white;
+  letter-spacing: .5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 7px;
+  font-weight: bold;
 }
+#weatherDetails{
+  display: none;
+}
+#extraWeatherDetails{
+    background-color: aliceblue;
+    font-weight: bold;
+    font-size: 21px;
+    letter-spacing: .5px;
+    display: flex;
+    padding: 13px;
+    justify-content: space-around;
+}
+#temperature{font-size: 25px;}
 #seperator{font-weight: bold;}
 #userInputBox{
   padding: 13px;
@@ -71,3 +90,4 @@
   margin: 0px auto;
   font-size: 19px;
 }
+.htmlEmojis{font-size: 60px;}
