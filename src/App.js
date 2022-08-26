@@ -26,7 +26,9 @@ function App() {
         setCity(data.name);
         setCityWeather(data);
         setShowWeather("enable");
-      } else{
+      } 
+      // If status is not ok
+      else{
         setCity(null);
         setShowWeather("disable");
         setCityWeather(null);
