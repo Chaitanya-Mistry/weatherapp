@@ -92,3 +92,16 @@
   font-size: 19px;
 }
 .htmlEmojis{font-size: 60px;}
+
+/* Responsive Designing Goes Here  */
+
+/* For Tablets 💻*/
+@media screen and (min-width:481px) and (max-width:768px){
+  #weatherMainContainer{width: 80%}
+}
+
+/* For Mobile phones 📴 */
+@media screen and (min-width:320px) and (max-width:480px){
+  #weatherMainContainer{width: 90%}
+}
+  

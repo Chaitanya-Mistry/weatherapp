@@ -20,7 +20,7 @@ function App() {
       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userInputVal}&units=metric&appid=${apiKey}`);
 
       // IF data has received successfully only then change the state .. 
-      if (response.status == 200 && response.statusText == "OK") {
+      if (response.status === 200 && response.statusText === "OK") {
         // Convert response in json format 
         const data = await response.json();
         setCity(data.name);
@@ -59,7 +59,7 @@ function App() {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`);
 
         // IF data has received successfully only then change the state .. 
-        if (response.status == 200 && response.statusText == "OK") {
+        if (response.status === 200 && response.statusText === "OK") {
           // Convert response in json format 
           const data = await response.json();
           setCity(data.name);
@@ -107,19 +107,19 @@ function App() {
             <span className='htmlEmojis'>
               
               {/* Overcast clouds */}
-              {cityWeather.weather[0].description == "overcast clouds" ? (<span className='htmlEmojis'> ☁️ </span>
+              {cityWeather.weather[0].description === "overcast clouds" ? (<span className='htmlEmojis'> ☁️ </span>
               ):(<span/>)}
               {/* Few clouds or Scattered Clouds */}
-              {cityWeather.weather[0].description == "few clouds" || cityWeather.weather[0].description == "scattered clouds" ? (<span className='htmlEmojis'> 🌥️ </span>
+              {cityWeather.weather[0].description === "few clouds" || cityWeather.weather[0].description === "scattered clouds" ? (<span className='htmlEmojis'> 🌥️ </span>
               ):(<span/>)}
               {/* Sunny */}
-              {cityWeather.weather[0].description == "clear sky" ? (<span className='htmlEmojis'> ☀️ </span>
+              {cityWeather.weather[0].description === "clear sky" ? (<span className='htmlEmojis'> ☀️ </span>
               ):(<span/>)}
               {/* Haze or Mist */}
-              {cityWeather.weather[0].description == "haze" || cityWeather.weather[0].description == 'mist' ? (<span className='htmlEmojis'> 🌁 </span>
+              {cityWeather.weather[0].description === "haze" || cityWeather.weather[0].description === 'mist' ? (<span className='htmlEmojis'> 🌁 </span>
               ):(<span/>)}
               {/* Broken Clouds */}
-              {cityWeather.weather[0].description == "broken clouds" ? (<span className='htmlEmojis'> 🌤️ </span>
+              {cityWeather.weather[0].description === "broken clouds" ? (<span className='htmlEmojis'> 🌤️ </span>
               ):(<span/>)}
               {/* Rain */}
               {(cityWeather.weather[0].description).includes("rain") ? (<span className='htmlEmojis'> ⛈️ </span>
